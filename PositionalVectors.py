@@ -1,21 +1,21 @@
 
 class Vector2:
-    def __init__(x : float,y : float):
+    def __init__(self, x : float,y : float):
         self.x = x
         self.y = y
 
-    def add(input : 'Vector2'):
+    def add(self, input : 'Vector2'):
         self.x += input.x
         self.y += input.y
 
-    def subtract(input : 'Vector2'):
+    def subtract(self, input : 'Vector2'):
         self.x -= input.x
         self.y -= input.y
 
-    def multiply(input : int):
+    def multiply(self, input : int):
         self.x *= input
         self.y *= input
 
-    def divide(input : int):
+    def divide(self, input : int):
         self.x /= input
         self.y /= input

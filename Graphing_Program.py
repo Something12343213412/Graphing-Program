@@ -8,9 +8,11 @@ screen = pygame.display.set_mode(size)
 # Creating an array to hold all the different lines in the program
 lines = []
 
+# Creating a new line
+lines.append(Line(Vector2()))
 
 while True:
-
+    
 
 
     for i in range(len(lines)):
