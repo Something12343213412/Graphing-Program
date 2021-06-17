@@ -9,6 +9,15 @@ class Line:
        self.Color = Color
        self.Width = Width
 
+    def getStartingPosition():
+        return self.One
     
+    def getEndingPosition():
+        return self.Two
 
+    def getColor():
+        return self.Color
+
+    def getWidth():
+        return self.Width
 
