@@ -16,4 +16,4 @@ while True:
     for i in range(len(lines)):
         pygame.draw.line(lines[i])
 
-    window.display.flip()
+    pygame.display.flip()
