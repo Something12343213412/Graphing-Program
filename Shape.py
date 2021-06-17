@@ -3,21 +3,21 @@ import pygame
 
 class Line:
     
-    def __init__(One : Vector2, Two : Vector2, Color : (int,int,int), Width : int):
+    def __init__(self, One : Vector2, Two : Vector2, Color : (int,int,int), Width : int):
        self.One = One
        self.Two = Two
        self.Color = Color
        self.Width = Width
 
-    def getStartingPosition():
+    def getStartingPosition(self):
         return self.One
     
-    def getEndingPosition():
+    def getEndingPosition(self):
         return self.Two
 
-    def getColor():
+    def getColor(self):
         return self.Color
 
-    def getWidth():
+    def getWidth(self):
         return self.Width
 
