@@ -28,6 +28,6 @@ while True:
 
     # Drawing Rectangles
     for i in range(len(rectangles)):
-        pygame.draw.Rect(screen, rectangles[i].getColor(), rectangles[i].getPygameRect())
+        pygame.draw.rect(screen, rectangles[i].getColor(), rectangles[i].getPygameRect())
 
     pygame.display.flip()
