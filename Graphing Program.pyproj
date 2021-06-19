@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ShapeRect.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Graphing_Program.py" />
     <Compile Include="PositionalVectors.py">
       <SubType>Code</SubType>
