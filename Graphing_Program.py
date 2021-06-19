@@ -11,13 +11,14 @@ screen = pygame.display.set_mode(size)
 lines = []
 
 # Creating a new line
-lines.append(Line(Vector2(1,1), Vector2(200,200),[200,50,50],10))
+
+# Example of how to add a line : lines.append(Line(Vector2(1,1), Vector2(200,200),[200,50,50],10))
 
 # Creating an array to hold all the different rectangles in the program
 rectangles = []
 
 # Creating a new rectangle
-rectangles.append(Rect(Vector2(1,1),Vector2(400,400),[50,50,200]))
+rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
 
 while True:
     
