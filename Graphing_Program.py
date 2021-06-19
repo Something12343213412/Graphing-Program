@@ -16,6 +16,6 @@ while True:
 
 
     for i in range(len(lines)):
-        pygame.draw.line(screen, lines[i].getColor(), lines[i].getStartingPositionArray(), lines[i].getEndingPositionArray())
+        pygame.draw.line(screen, lines[i].getColor(), lines[i].getStartingPositionArray(), lines[i].getEndingPositionArray(), lines[i].getWidth())
 
     pygame.display.flip()
