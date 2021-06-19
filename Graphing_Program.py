@@ -9,13 +9,13 @@ screen = pygame.display.set_mode(size)
 lines = []
 
 # Creating a new line
-lines.append(Line(Vector2()))
+lines.append(Line(Vector2(1,1), Vector2(200,200),[200,50,50]),10)
 
 while True:
     
 
 
     for i in range(len(lines)):
-        pygame.draw.line(lines[i])
+        pygame.draw.line()
 
     pygame.display.flip()

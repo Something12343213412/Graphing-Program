@@ -21,3 +21,8 @@ class Line:
     def getWidth(self):
         return self.Width
 
+    def getStartingPositionArray(self):
+        return [self.One.x, self.One.y]
+
+    def getEndingPositionArray(self):
+        return [self.Two.x, self.Two.y]
