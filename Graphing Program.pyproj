@@ -25,7 +25,7 @@
     <Compile Include="PositionalVectors.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Shape.py">
+    <Compile Include="ShapeLine.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

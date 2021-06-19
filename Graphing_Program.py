@@ -1,6 +1,6 @@
 import pygame
 from PositionalVectors import Vector2
-from Shape import Line
+from ShapeLine import Line
 
 size = width, height = 400,400
 screen = pygame.display.set_mode(size)
