@@ -17,13 +17,17 @@ lines.append(Line(Vector2(1,1), Vector2(200,200),[200,50,50],10))
 rectangles = []
 
 # Creating a new rectangle
-rectangles.append()
+rectangles.append(Rect(Vector2(1,1),Vector2(400,400),[50,50,200]))
 
 while True:
     
 
-
+    # Drawing Lines
     for i in range(len(lines)):
         pygame.draw.line(screen, lines[i].getColor(), lines[i].getStartingPositionArray(), lines[i].getEndingPositionArray(), lines[i].getWidth())
+
+    # Drawing Rectangles
+    for i in range(len(rectangles)):
+        pygame.draw.Rect(screen, rectangles[i].getColor(), rectangles[i].getPygameRect())
 
     pygame.display.flip()

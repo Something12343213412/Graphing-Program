@@ -32,6 +32,9 @@ class Rect():
     def getColor(self):
         return self.color
 
+    # getter function for python rect
+    def getPygameRect(self):
+        return self.pygameRect
 
 
 
