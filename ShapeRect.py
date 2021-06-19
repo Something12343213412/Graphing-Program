@@ -8,9 +8,26 @@ class Rect():
         self.pos = pos
         self.dimensions = dimensions
         self.color = color
-
     
+    # getter function, position, Vector2
+    def getPosition(self):
+        return self.pos
+    
+    # getter function, position, Array
+    def getPositionArray(self):
+        return [self.pos.x, self.pos.y]
 
+    # getter function, dimensions, Vector2
+    def getDimensions(self):
+        return self.dimensions
+
+    # getter function, dimensions, Array
+    def getDimensionsArray(self):
+        return [self.dimensions.x, self.dimensions.y]
+    
+    # getter function, color, tuple
+    def getColor(self):
+        return self.color
 
 
 
