@@ -1,4 +1,5 @@
 from PositionalVectors import Vector2
+import pygame
 
 # Rectangle class
 class Rect():
@@ -8,6 +9,8 @@ class Rect():
         self.pos = pos
         self.dimensions = dimensions
         self.color = color
+        # Creating an object that the pygame renderer has to do no conversions for
+        self.pygameRect = pygame.Rect(pos.x,pos.y,dimensions.x,dimensions.y)
     
     # getter function, position, Vector2
     def getPosition(self):
