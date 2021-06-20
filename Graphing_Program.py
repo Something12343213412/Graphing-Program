@@ -6,6 +6,10 @@ from ShapeRect import Rect
 from ShapeRectBorder import RectBorder
 import Rendering
 
+# Creating the screen
+size = width, height = 400,400
+screen = pygame.display.set_mode(size)
+
 # Creating an array to hold all the different lines in the program
 lines = []
 
