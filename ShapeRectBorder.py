@@ -1,5 +1,6 @@
 from ShapeRect import Rect
 from PositionalVectors import Vector2
+import pygame
 
 class RectBorder(Rect):
      
