@@ -24,3 +24,6 @@ class RectBorder(Rect):
 
     def getBorderWidth(self):
         return self.borderWidth
+
+    def getPygameBorderRectangles(self):
+        return self.borderRectangles
