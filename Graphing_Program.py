@@ -32,11 +32,10 @@ borderRectangles.append(RectBorder(Vector2(100,100),Vector2(20,20),[75,75,150],5
 while True:
     
     # Drawing Lines
-    Rendering.drawLines()
+    Rendering.drawLines(lines)
 
     # Drawing Rectangles
-    for i in range(len(rectangles)):
-        pygame.draw.rect(Rendering.screen, rectangles[i].getColor(), rectangles[i].getPygameRect())
+    Rendering.drawRectangles(rectangles)
 
     # Drawing Rectangles Borders
     for i in range(len(borderRectangles)):
