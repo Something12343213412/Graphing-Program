@@ -11,3 +11,10 @@ def drawLines(lines : []):
 def drawRectangles(rectangles : []):
     for i in range(len(rectangles)):
         pygame.draw.rect(screen, rectangles[i].getColor(), rectangles[i].getPygameRect())
+
+def drawRectanglesBorder(borderRectangles : []):
+    for i in range(len(borderRectangles)):
+        # Drawing the border first
+        pygame.draw.rect(screen, borderRectangles[i].getRectBorderColor(), borderRectangles[i].getPygameBorderRectangles())
+        # Drawing the actual rectangle
+        pygame.draw.rect(screen, borderRectangles[i].getColor(), borderRectangles[i].getPygameRect())
