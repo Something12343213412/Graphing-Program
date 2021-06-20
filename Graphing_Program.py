@@ -4,6 +4,7 @@ from PositionalVectors import Vector2
 from ShapeLine import Line
 from ShapeRect import Rect
 from ShapeRectBorder import RectBorder
+import Rendering
 
 # Creating the screen
 size = width, height = 400,400
@@ -32,18 +33,18 @@ while True:
     
     # Drawing Lines
     for i in range(len(lines)):
-        pygame.draw.line(screen, lines[i].getColor(), lines[i].getStartingPositionArray(), lines[i].getEndingPositionArray(), lines[i].getWidth())
+        pygame.draw.line(Rendering.screen, lines[i].getColor(), lines[i].getStartingPositionArray(), lines[i].getEndingPositionArray(), lines[i].getWidth())
 
     # Drawing Rectangles
     for i in range(len(rectangles)):
-        pygame.draw.rect(screen, rectangles[i].getColor(), rectangles[i].getPygameRect())
+        pygame.draw.rect(Rendering.screen, rectangles[i].getColor(), rectangles[i].getPygameRect())
 
     # Drawing Rectangles Borders
     for i in range(len(borderRectangles)):
         # Drawing the border first
-        pygame.draw.rect(screen, borderRectangles[i].getRectBorderColor(), borderRectangles[i].getPygameBorderRectangles())
+        pygame.draw.rect(Rendering.screen, borderRectangles[i].getRectBorderColor(), borderRectangles[i].getPygameBorderRectangles())
         # Drawing the actual rectangle
-        pygame.draw.rect(screen, borderRectangles[i].getColor(), borderRectangles[i].getPygameRect())
+        pygame.draw.rect(Rendering.screen, borderRectangles[i].getColor(), borderRectangles[i].getPygameRect())
 
 
     pygame.display.flip()
