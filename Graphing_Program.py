@@ -15,7 +15,7 @@ lines = []
 
 # Creating a new line
 
-# Example of how to add a line : lines.append(Line(Vector2(1,1), Vector2(200,200),[200,50,50],10))
+lines.append(Line(Vector2(1,1), Vector2(200,200),[200,50,50],10))
 
 # Creating an array to hold all the different rectangles in the program
 rectangles = []
@@ -24,7 +24,7 @@ rectangles = []
 borderRectangles = []
 
 # Creating a new rectangle
-rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
+#rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
 
 # Creating a new rectangle with a border
 borderRectangles.append(RectBorder(Vector2(100,100),Vector2(20,20),[75,75,150],5,[0,0,0]))
@@ -32,8 +32,7 @@ borderRectangles.append(RectBorder(Vector2(100,100),Vector2(20,20),[75,75,150],5
 while True:
     
     # Drawing Lines
-    for i in range(len(lines)):
-        pygame.draw.line(Rendering.screen, lines[i].getColor(), lines[i].getStartingPositionArray(), lines[i].getEndingPositionArray(), lines[i].getWidth())
+    Rendering.drawLines(lines)
 
     # Drawing Rectangles
     for i in range(len(rectangles)):
