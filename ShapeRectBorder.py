@@ -14,6 +14,9 @@ class RectBorder(Rect):
         # Creating the border of the object and color of the border
         self.borderWidth = borderWidth
         self.borderColor = borderColor
+
+        # Creating the border rectangle that is going nto be behind the first
+        self.borderRectangles = pygame.Rect(pos.x - borderWidth, pos.y - borderWidth, dimensions.x + borderWidth * 2, dimensions.y + borderWidth * 2)
      
 
 
