@@ -26,7 +26,7 @@ borderRectangles = []
 rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
 
 # Creating a new rectangle with a border
-borderRectangles.append(RectBorder(Vector2(100,100),Vector2(20,20),[75,75,150],5,[255,255,255]))
+borderRectangles.append(RectBorder(Vector2(100,100),Vector2(20,20),[75,75,150],5,[0,0,0]))
 
 while True:
     

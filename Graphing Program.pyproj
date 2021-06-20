@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Rendering.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ShapeRectBorder.py">
       <SubType>Code</SubType>
     </Compile>
