@@ -40,8 +40,7 @@ while True:
 
     # Drawing Rectangles Borders
     for i in range(len(borderRectangles)):
-
         # Creating the border first
-        pygame.draw.rect(screen, )
+        pygame.draw.rect(screen, borderRectangles[i].borderColor, )
 
     pygame.display.flip()

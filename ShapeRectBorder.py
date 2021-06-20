@@ -19,4 +19,8 @@ class RectBorder(Rect):
         self.borderRectangles = pygame.Rect(pos.x - borderWidth, pos.y - borderWidth, dimensions.x + borderWidth * 2, dimensions.y + borderWidth * 2)
      
 
+    def getRectBorderColor(self):
+        return self.borderColor
 
+    def getBorderWidth(self):
+        return self.borderWidth
