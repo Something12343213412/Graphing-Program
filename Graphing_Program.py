@@ -6,6 +6,9 @@ from ShapeRect import Rect
 from ShapeRectBorder import RectBorder
 import Rendering
 
+# intilizing fonts
+pygame.font.init()
+
 # Creating the screen
 size = width, height = 400,400
 screen = pygame.display.set_mode(size)

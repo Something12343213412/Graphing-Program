@@ -4,14 +4,17 @@ import pygame
 size = width, height = 400,400
 screen = pygame.display.set_mode(size)
 
+# Drawing lines
 def drawLines(lines : []):
     for i in range(len(lines)):
         pygame.draw.line(screen, lines[i].getColor(), lines[i].getStartingPositionArray(), lines[i].getEndingPositionArray(), lines[i].getWidth())
 
+# Drawing Rectangles
 def drawRectangles(rectangles : []):
     for i in range(len(rectangles)):
         pygame.draw.rect(screen, rectangles[i].getColor(), rectangles[i].getPygameRect())
 
+# Drawing Rectangle Borders
 def drawRectanglesBorder(borderRectangles : []):
     for i in range(len(borderRectangles)):
         # Drawing the border first
