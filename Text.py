@@ -17,3 +17,11 @@ def displayText(screen, text : '', color : (int,int,int), size, pos : Vector2):
 
     # displaying screen
     screen.blit(textsurface,(pos.x,pos.y))
+
+
+class textInformation():
+    
+    def __init__(position : Vector2, color : (int,int,int), characters : ''):
+        self.pos = position
+        self.color = color
+        self.characters = characters
