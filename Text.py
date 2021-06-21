@@ -4,7 +4,7 @@ import pygame
 pygame.font.init()
 
 
-textsurface = myfont.render('Some Text', False, (0, 0, 0))
+myfont = pygame.font.SysFont('Comic Sans MS', 30)
 
 # Mapping the font to a variable
 textsurface = myfont.render('Some Text', False, (0, 0, 0))
