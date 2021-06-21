@@ -25,3 +25,12 @@ class textInformation():
         self.pos = position
         self.color = color
         self.characters = characters
+
+    def getPosition(self):
+        return self.pos
+
+    def getColor(self):
+        return self.color
+
+    def getCharacters(self):
+        return self.characters
