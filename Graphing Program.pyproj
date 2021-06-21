@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Text.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Rendering.py">
       <SubType>Code</SubType>
     </Compile>
