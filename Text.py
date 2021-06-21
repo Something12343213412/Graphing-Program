@@ -4,10 +4,12 @@ import pygame
 pygame.font.init()
 
 
-myfont = pygame.font.SysFont('Comic Sans MS', 30)
 
 
-def displayText(screen, text : '', color : (int,int,int)):
+
+def displayText(screen, text : '', color : (int,int,int), size):
+    myfont = pygame.font.SysFont('Comic Sans MS', size)
+
     # Mapping the font to a variable
     textsurface = myfont.render(text, False, color)
 
