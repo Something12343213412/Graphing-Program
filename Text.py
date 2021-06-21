@@ -7,8 +7,8 @@ pygame.font.init()
 myfont = pygame.font.SysFont('Comic Sans MS', 30)
 
 
-def test():
+def displayText(screen, text : '', color : (int,int,int)):
     # Mapping the font to a variable
-    textsurface = myfont.render('Some Text', False, (0, 0, 0))
+    textsurface = myfont.render(text, False, color)
 
     screen.blit(textsurface,(0,0))

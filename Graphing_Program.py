@@ -5,6 +5,7 @@ from ShapeLine import Line
 from ShapeRect import Rect
 from ShapeRectBorder import RectBorder
 import Rendering
+import Text
 
 # Creating the screen
 size = width, height = 400,400
@@ -30,7 +31,7 @@ rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
 borderRectangles.append(RectBorder(Vector2(100,100),Vector2(20,20),[75,75,150],5,[0,0,0]))
 
 while True:
-    
+
     # Drawing Lines
     Rendering.drawLines(lines)
 
@@ -40,5 +41,6 @@ while True:
     # Drawing Rectangles Borders
     Rendering.drawRectanglesBorder(borderRectangles)
 
+    Text.test(screen)
 
     pygame.display.flip()
