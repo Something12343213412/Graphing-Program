@@ -21,3 +21,8 @@ def drawRectanglesBorder(borderRectangles : []):
         pygame.draw.rect(screen, borderRectangles[i].getRectBorderColor(), borderRectangles[i].getPygameBorderRectangles())
         # Drawing the actual rectangle
         pygame.draw.rect(screen, borderRectangles[i].getColor(), borderRectangles[i].getPygameRect())
+
+
+# Drawing Buttons
+def drawButtons(buttons : []):
+    drawRectanglesBorder(buttons)
