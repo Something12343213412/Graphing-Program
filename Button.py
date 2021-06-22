@@ -23,12 +23,14 @@ class Button(RectBorder):
         self.borderRectangles = pygame.Rect(pos.x - borderWidth, pos.y - borderWidth, dimensions.x + borderWidth * 2, dimensions.y + borderWidth * 2)
 
         # Information about the text
-        self.textInfo
+        self.textInfo = Text.textInformation(textPosition, textColor, characters)
 
         # Pressing the button information
         self.isPressed = false
 
     def getTextInformation():
+        return self.textInfo
 
+        
         
     
