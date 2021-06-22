@@ -4,6 +4,7 @@ from PositionalVectors import Vector2
 from ShapeLine import Line
 from ShapeRect import Rect
 from ShapeRectBorder import RectBorder
+from Button import Button
 import Rendering
 import Text
 
@@ -28,7 +29,13 @@ borderRectangles = []
 rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
 
 # Creating a new rectangle with a border
-borderRectangles.append(RectBorder(Vector2(100,100),Vector2(20,20),[75,75,150],5,[0,0,0]))
+#borderRectangles.append(RectBorder(Vector2(100,100),Vector2(20,20),[75,75,150],5,[0,0,0]))
+
+# Creating an array to hold all the buttons
+buttons = []
+
+# adding objects to the buttons list
+buttons.append(Button(Vector2(100,100),Vector2(60,60),[75,75,150],5,[0,0,0]), "Test",[255,255,255], Vector2(110,110))
 
 while True:
 
