@@ -41,6 +41,4 @@ while True:
     # Drawing Rectangles Borders
     Rendering.drawRectanglesBorder(borderRectangles)
 
-    Text.test(screen)
-
     pygame.display.flip()
