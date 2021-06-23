@@ -1,4 +1,5 @@
 import pygame
+import Text
 
 # Creating the screen
 size = width, height = 400,400
