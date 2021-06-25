@@ -5,20 +5,6 @@ from PositionalVectors import Vector2
 pygame.font.init()
 
 
-
-
-
-def displayText(screen, text : '', color : (int,int,int), size, pos : Vector2):
-    # attaching the font to a variable
-    myfont = pygame.font.SysFont('Comic Sans MS', text.size)
-
-    # Mapping the font to a variable
-    textsurface = myfont.render(text, False, color)
-
-    # displaying screen
-    screen.blit(textsurface,(pos.x,pos.y))
-
-
 class textInformation():
     
     def __init__(self, position : Vector2, color : (int,int,int), characters : '', size):
@@ -38,3 +24,15 @@ class textInformation():
 
     def getCharacters(self):
         return self.characters
+
+
+
+def displayText(screen, text : textInformation):
+    # attaching the font to a variable
+    myfont = pygame.font.SysFont('Comic Sans MS', text.getSize())
+    # Mapping the font to a variable
+    textsurface = myfont.render(text.getCharacters(), False, text.getColor())
+    # displaying screen
+    screen.blit(screen,(text.getPosition().x,text.getPosition().y))
+
+

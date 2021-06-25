@@ -30,4 +30,4 @@ def drawButtons(buttons : []):
 
     # Creating a for loop to loop through all the text
     for i in range(len(buttons)):
-        Text.displayText(screen, buttons[i].getTextInformation().getCharacters, buttons[i].getTextInformation().getColor(), buttons[i].getTextInformation().getSize(), buttons[i].getTextInformation().getPosition())
+        Text.displayText(screen, buttons[i].getTextInformation())
