@@ -35,7 +35,7 @@ rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
 buttons = []
 
 # adding objects to the buttons list
-buttons.append(Button(Vector2(40,40),Vector2(200,60),[75,75,150],5,[0,0,0], "Close Program",[0,255,0], Vector2(40,45), 30))
+buttons.append(Button(Vector2(40,40),Vector2(200,60),[75,75,150],5,[0,0,0], "Close Program",[0,255,0], Vector2(40,45),1, 30))
 
 while True:
 

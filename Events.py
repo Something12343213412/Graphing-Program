@@ -12,4 +12,4 @@ def LinkToEvent(event : int):
         testEvent()
 
     if event == 1:
-        closeProgram
+        closeProgram()
