@@ -35,7 +35,7 @@ rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
 buttons = []
 
 # adding objects to the buttons list
-buttons.append(Button(Vector2(100,100),Vector2(60,60),[75,75,150],5,[0,0,0], "test",[0,255,0], Vector2(110,110)))
+buttons.append(Button(Vector2(40,40),Vector2(200,60),[75,75,150],5,[0,0,0], "Close Program",[0,255,0], Vector2(40,45), 30))
 
 while True:
 
@@ -62,7 +62,6 @@ while True:
         buttons[i].isClicked()
 
     # Drawing Buttons
-    buttons[0].changeText(str(pygame.time.get_ticks()))
     Rendering.drawButtons(buttons)
 
     # Displaying everything
