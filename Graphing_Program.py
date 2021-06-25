@@ -59,7 +59,7 @@ while True:
 
     # checking if the cursor is over buttons
     for i in range(len(buttons)):
-        buttons[i].isPointerOver()
+        buttons[i].isClicked()
 
     # Drawing Buttons
     buttons[0].changeText(str(pygame.time.get_ticks()))

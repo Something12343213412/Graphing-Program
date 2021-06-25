@@ -13,6 +13,9 @@ class Button(RectBorder):
         self.color = color
         self.baseColor = color
 
+        # adding a color when clicked
+        self.colorWhenClicked = (color[0]/2,color[1]/2,color[2]/2)
+
         # adding a color when pressed
         self.colorWhenHovered = (color[0] + 30, color[1] + 30, color[2] + 30)
         
@@ -55,7 +58,11 @@ class Button(RectBorder):
             self.isHovered = False
 
     def isClicked(self):
-        pass
+        self.isPointerOver()
+        if(pygame.mouse.get_pressed()[0] and self.isHovered):
+            # Budget Solution for now until we add an event system
+            self.color = self.colorWhenClicked
+
 
 
     
