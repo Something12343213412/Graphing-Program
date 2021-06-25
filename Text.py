@@ -26,13 +26,11 @@ class textInformation():
         return self.characters
 
 
-
 def displayText(screen, text : textInformation):
     # attaching the font to a variable
     myfont = pygame.font.SysFont('Comic Sans MS', text.getSize())
     # Mapping the font to a variable
     textsurface = myfont.render(text.getCharacters(), False, text.getColor())
     # displaying screen
-    screen.blit(screen,(text.getPosition().x,text.getPosition().y))
-
+    screen.blit(textsurface,(text.getPosition().x,text.getPosition().y))
 

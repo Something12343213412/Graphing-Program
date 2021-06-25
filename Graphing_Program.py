@@ -8,6 +8,8 @@ from Button import Button
 import Rendering
 import Text
 
+
+
 # Creating the screen
 size = width, height = 400,400
 screen = pygame.display.set_mode(size)
@@ -35,10 +37,9 @@ rectangles.append(Rect(Vector2(0,0),Vector2(400,400),[50,50,200]))
 buttons = []
 
 # adding objects to the buttons list
-buttons.append(Button(Vector2(100,100),Vector2(60,60),[75,75,150],5,[0,0,0], "test",[255,255,255], Vector2(110,110)))
+buttons.append(Button(Vector2(100,100),Vector2(60,60),[75,75,150],5,[0,0,0], "test",[0,255,0], Vector2(110,110)))
 
 while True:
-
     # Drawing Lines
     Rendering.drawLines(lines)
 
