@@ -38,6 +38,8 @@ buttons = []
 buttons.append(Button(Vector2(100,100),Vector2(60,60),[75,75,150],5,[0,0,0], "test",[0,255,0], Vector2(110,110)))
 
 while True:
+    # THIS IS A VERY NESCARY LINE OF CODE, NEVER REMOVE IT
+    pygame.event.get()
 
     # Setting the framerate
     clock.tick(60)
