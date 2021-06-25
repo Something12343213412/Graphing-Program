@@ -33,6 +33,10 @@ class Button(RectBorder):
 
     def changeText(self,text):
         self.textInfo.characters = text
+
+    def isPointerOver(self, mousePosition : Vector2):
+
+
         
         
     

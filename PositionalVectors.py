@@ -19,3 +19,4 @@ class Vector2:
     def divide(self, input : int):
         self.x /= input
         self.y /= input
+

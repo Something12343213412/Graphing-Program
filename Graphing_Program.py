@@ -38,6 +38,10 @@ buttons = []
 buttons.append(Button(Vector2(100,100),Vector2(60,60),[75,75,150],5,[0,0,0], "test",[0,255,0], Vector2(110,110)))
 
 while True:
+
+    # Getting the mouse position
+    mousePosition = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
+
     # THIS IS A VERY NESCARY LINE OF CODE, NEVER REMOVE IT
     pygame.event.get()
 
@@ -54,7 +58,7 @@ while True:
     Rendering.drawRectanglesBorder(borderRectangles)
 
     # Drawing Buttons
-    buttons[0].changeText(str(pygame.time.get_ticks()))
+    buttons[0].changeText(str(mousePosition.x) + " " + str(mousePosition.y))
     Rendering.drawButtons(buttons)
 
     # Displaying everything
