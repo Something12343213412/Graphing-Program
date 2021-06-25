@@ -7,7 +7,7 @@ import pygame
 class Button(RectBorder):
     
     # constructor
-    def __init__(self, pos : Vector2, dimensions : Vector2, color : (int,int,int), borderWidth : int, borderColor : (int,int,int), characters : '', textColor : (int,int,int), textPosition : Vector2):
+    def __init__(self, pos : Vector2, dimensions : Vector2, color : (int,int,int), borderWidth : int, borderColor : (int,int,int), characters : '', textColor : (int,int,int), textPosition : Vector2, textSize = 20):
         self.pos = pos
         self.dimensions = dimensions
         self.color = color
