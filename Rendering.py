@@ -27,3 +27,8 @@ def drawRectanglesBorder(borderRectangles : []):
 # Drawing Buttons
 def drawButtons(buttons : []):
     drawRectanglesBorder(buttons)
+
+    # Creating a for loop to loop through all the text
+    for i in range(len(buttons)):
+        
+
