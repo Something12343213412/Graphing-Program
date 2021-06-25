@@ -43,13 +43,19 @@ class Button(RectBorder):
     def changeText(self,text):
         self.textInfo.characters = text
 
-    def isPointerOver(self, mousePosition : Vector2):
+    def isPointerOver(self):
+        mousePosition = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
         # Collision logic
         if(mousePosition.x > self.collider.leftBorder and mousePosition.x < self.collider.rightBorder and mousePosition.y > self.collider.upperBorder and mousePosition.y < self.collider.lowerBorder):
             self.color = self.colorWhenHovered
+            self.isHovered = True
 
         else:
             self.color = self.baseColor
+            self.isHovered = False
+
+    def isClicked(self):
+        pass
 
 
     

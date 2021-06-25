@@ -59,10 +59,10 @@ while True:
 
     # checking if the cursor is over buttons
     for i in range(len(buttons)):
-        buttons[i].isPointerOver(mousePosition)
+        buttons[i].isPointerOver()
 
     # Drawing Buttons
-    buttons[0].changeText(str(mousePosition.x) + " " + str(mousePosition.y))
+    buttons[0].changeText(str(pygame.time.get_ticks()))
     Rendering.drawButtons(buttons)
 
     # Displaying everything
