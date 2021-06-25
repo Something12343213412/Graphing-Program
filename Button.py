@@ -66,7 +66,7 @@ class Button(RectBorder):
         if(pygame.mouse.get_pressed()[0] and self.isHovered):
             # Budget Solution for now until we add an event system
             self.color = self.colorWhenClicked
-            Events.closeProgram()
+            Events.LinkToEvent(self.linkedEvent)
 
 
 
