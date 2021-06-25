@@ -8,12 +8,6 @@ from Button import Button
 import Rendering
 import Text
 
-
-
-# Creating the screen
-size = width, height = 400,400
-screen = pygame.display.set_mode(size)
-
 # Creating an array to hold all the different lines in the program
 lines = []
 
