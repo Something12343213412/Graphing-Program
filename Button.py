@@ -31,6 +31,8 @@ class Button(RectBorder):
     def getTextInformation(self):
         return self.textInfo
 
+    def changeText(self,text):
+        self.textInfo.characters = text
         
         
     
