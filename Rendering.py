@@ -26,5 +26,4 @@ def drawRectanglesBorder(borderRectangles : []):
 
 # Drawing Buttons
 def drawButtons(buttons : []):
-    for i in range(buttons):
-        drawRectanglesBorder(buttons[i])
+    drawRectanglesBorder(buttons)
