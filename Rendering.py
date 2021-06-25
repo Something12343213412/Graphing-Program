@@ -2,7 +2,7 @@ import pygame
 import Text
 
 # Creating the screen
-size = width, height = 400,400
+size = width, height = 1280,720
 screen = pygame.display.set_mode(size)
 
 # Drawing lines

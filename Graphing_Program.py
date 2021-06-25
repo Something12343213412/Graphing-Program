@@ -44,6 +44,7 @@ while True:
     Rendering.drawRectanglesBorder(borderRectangles)
 
     # Drawing Buttons
+    mousePosition = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
     Rendering.drawButtons(buttons)
 
     # Displaying everything
