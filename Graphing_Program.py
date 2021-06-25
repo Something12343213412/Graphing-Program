@@ -8,6 +8,10 @@ from Button import Button
 import Rendering
 import Text
 
+# Creating the clock
+clock = pygame.time.Clock()
+
+
 # Creating an array to hold all the different lines in the program
 lines = []
 
@@ -34,6 +38,10 @@ buttons = []
 buttons.append(Button(Vector2(100,100),Vector2(60,60),[75,75,150],5,[0,0,0], "test",[0,255,0], Vector2(110,110)))
 
 while True:
+
+    # Setting the framerate
+    clock.tick(60)
+
     # Drawing Lines
     Rendering.drawLines(lines)
 
@@ -44,7 +52,7 @@ while True:
     Rendering.drawRectanglesBorder(borderRectangles)
 
     # Drawing Buttons
-    mousePosition = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
+    buttons[0].changeText(str(pygame.time.get_ticks()))
     Rendering.drawButtons(buttons)
 
     # Displaying everything
