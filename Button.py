@@ -1,6 +1,6 @@
 
 from ShapeRectBorder import RectBorder
-from PositionalVectors import Vector2
+from PositionalVectors import *
 import Text
 import pygame
 
@@ -12,6 +12,10 @@ class Button(RectBorder):
         self.dimensions = dimensions
         self.color = color
         
+        # Creating the borders of the collision box
+        self.collider = RectangleBorders(pos, dimensions, borderWidth)
+
+
         # Creating an object that the pygame renderer has to do no conversions for
         self.pygameRect = pygame.Rect(pos.x,pos.y,dimensions.x,dimensions.y)
         
