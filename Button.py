@@ -35,6 +35,7 @@ class Button(RectBorder):
 
         # Pressing the button information
         self.isPressed = False
+        self.isHovered = False
 
     def getTextInformation(self):
         return self.textInfo
