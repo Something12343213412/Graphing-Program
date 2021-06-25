@@ -11,9 +11,10 @@ class Button(RectBorder):
         self.pos = pos
         self.dimensions = dimensions
         self.color = color
+        self.baseColor = color
 
         # adding a color when pressed
-        self.colorWhenHovered = (color[0] - 30, color[1] - 30, color[2] - 30)
+        self.colorWhenHovered = (color[0] + 30, color[1] + 30, color[2] + 30)
         
         # Creating the borders of the collision box
         self.collider = RectangleBorders(pos, dimensions, borderWidth)
@@ -45,6 +46,12 @@ class Button(RectBorder):
         # Collision logic
         if(mousePosition.x > self.collider.leftBorder and mousePosition.x < self.collider.rightBorder and mousePosition.y > self.collider.upperBorder and mousePosition.y < self.collider.lowerBorder):
             self.color = self.colorWhenHovered
+
+        else:
+            self.color = self.baseColor
+
+
+    
             
         
     

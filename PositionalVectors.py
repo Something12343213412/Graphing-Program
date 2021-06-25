@@ -24,7 +24,7 @@ class Vector2:
 class RectangleBorders:
 
     # init function
-    def __init__(self, position : Vector2(), dimensions : Vector2(), borderSize):
+    def __init__(self, position : Vector2, dimensions : Vector2, borderSize):
         self.leftBorder = position.x - borderSize/2
         self.upperBorder = position.y - borderSize/2
         self.lowerBorder = position.y + dimensions.y + borderSize/2

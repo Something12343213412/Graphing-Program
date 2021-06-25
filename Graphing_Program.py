@@ -57,6 +57,10 @@ while True:
     # Drawing Rectangles Borders
     Rendering.drawRectanglesBorder(borderRectangles)
 
+    # checking if the cursor is over buttons
+    for i in range(len(buttons)):
+        buttons[i].isPointerOver(mousePosition)
+
     # Drawing Buttons
     buttons[0].changeText(str(mousePosition.x) + " " + str(mousePosition.y))
     Rendering.drawButtons(buttons)
