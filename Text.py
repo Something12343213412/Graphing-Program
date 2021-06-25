@@ -34,5 +34,5 @@ def displayText(screen, text : textInformation):
     textsurface = myfont.render(text.getCharacters(), False, text.getColor())
 
     # displaying screen
-    screen.blit(screen,(text.getPos().x,text.getPos.y))
+    screen.blit(screen,(text.getPosition().x,text.getPosition().y))
 
