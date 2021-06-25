@@ -14,6 +14,9 @@ class Button(RectBorder):
         self.color = color
         self.baseColor = color
 
+        # adding the event that the button is linked to
+        self.linkedEvent = event
+
         # adding a color when clicked
         self.colorWhenClicked = (color[0]/2,color[1]/2,color[2]/2)
 
