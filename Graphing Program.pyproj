@@ -24,6 +24,9 @@
     <Compile Include="Button.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Events.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Text.py">
       <SubType>Code</SubType>
     </Compile>
