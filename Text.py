@@ -10,7 +10,7 @@ pygame.font.init()
 
 def displayText(screen, text : '', color : (int,int,int), size, pos : Vector2):
     # attaching the font to a variable
-    myfont = pygame.font.SysFont('Comic Sans MS', size)
+    myfont = pygame.font.SysFont('Comic Sans MS', text.size)
 
     # Mapping the font to a variable
     textsurface = myfont.render(text, False, color)
@@ -26,6 +26,9 @@ class textInformation():
         self.color = color
         self.characters = characters
         self.size = size
+
+    def getSize(self):
+        return self.size
 
     def getPosition(self):
         return self.pos
