@@ -10,3 +10,6 @@ borderRectangles = []
 
 # Creating an array to hold all the buttons
 buttons = []
+
+# Creating an array to hold all the text
+text = []

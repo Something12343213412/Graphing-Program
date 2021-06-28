@@ -31,3 +31,8 @@ def drawButtons(buttons : []):
     #Creating a for loop to loop through all the text
     for i in range(len(buttons)):
         Text.displayText(screen, buttons[i].getTextInformation())
+
+# Render Text
+def RenderText(text : []):
+    for i in range(len(text)):
+        Text.displayText(text[i])
