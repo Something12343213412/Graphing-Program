@@ -15,6 +15,10 @@ def closeProgram():
 def rollCredits():
     Shapes.clearAll()
 
+
+
+
+
 # Creates the basic home screen, called at the start of the program
 def startingEvent():
     Shapes.clearAll()
@@ -45,3 +49,6 @@ def linkToEvent(event : int):
 
     if event == 2:
         startingEvent()
+
+    if event == 3:
+        rollCredits()
