@@ -18,7 +18,12 @@ def rollCredits():
     Shapes.rectangles.append(ShapeRect.Rect(Vector2(0,0), Vector2(1280,720), (0, 0, 0)))
 
     # Close Program Button
-    Shapes.buttons.append(Button.Button(Vector2(40,40),Vector2(200,60),[175,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5),1, 30))
+    Shapes.buttons.append(Button.Button(Vector2(40,40),Vector2(200,60),[150,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5),1, 30))
+
+    # Back Button
+    Shapes.buttons.append(Button.Button(Vector2(40,600),Vector2(75,60),[150,150,150],5,[0,0,0], "Back",[0,0,0], Vector2(5,5),1, 30))
+
+
 
 
 
