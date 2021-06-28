@@ -13,11 +13,11 @@ def closeProgram():
     pygame.quit()
 
 def rollCredits():
-    
+    Shapes.clearAll()
 
 # Creates the basic home screen, called at the start of the program
 def startingEvent():
-
+    Shapes.clearAll()
 
     # Background
     Shapes.rectangles.append(ShapeRect.Rect(Vector2(0,0), Vector2(1280,720), (71, 121, 201)))
