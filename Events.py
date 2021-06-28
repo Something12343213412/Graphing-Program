@@ -30,6 +30,24 @@ def testEvent():
 def closeProgram():
     pygame.quit()
 
+def settingsMenu():
+    Shapes.clearAll()
+    # Background
+    Shapes.rectangles.append(ShapeRect.Rect(Vector2(0,0), Vector2(1280,720), (0, 0, 0)))
+
+    # Close Program Button
+    Shapes.buttons.append(Button.Button(Vector2(40,40),Vector2(200,60),[150,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5),1, 30))
+
+    # Back Button
+    Shapes.buttons.append(Button.Button(Vector2(40,600),Vector2(75,60),[150,150,150],5,[0,0,0], "Back",[0,0,0], Vector2(5,5),4, 30))
+
+    # Setting Button
+    Shapes.buttons.append(Button.Button(Vector2(1000,40),Vector2(150,60),[75,75,75],5,[0,0,0], "Settings",[0,0,0], Vector2(15,5),1, 30))
+
+    # Adding the credits
+    Shapes.text.append(Text.textInformation(Vector2(300,300),(175,175,175),"Credits : Kevin Sandberg, Main Programmer",30))
+    Shapes.text.append(Text.textInformation(Vector2(300,340),(175,175,175),"Credits : RobertTeaches, Debugger",30))
+
 def rollCredits():
     Shapes.clearAll()
     # Background
@@ -66,3 +84,6 @@ def linkToEvent(event : int):
 
     if event == 4:
         returnToHome()
+
+    if event == 5:
+        settingsMenu()
