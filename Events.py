@@ -1,6 +1,7 @@
 import pygame
 import Shapes
 import Button
+import Text
 import ShapeRect
 from PositionalVectors import Vector2
 
@@ -11,8 +12,13 @@ def testEvent():
 def closeProgram():
     pygame.quit()
 
+def rollCredits():
+    
 
+# Creates the basic home screen, called at the start of the program
 def startingEvent():
+
+
     # Background
     Shapes.rectangles.append(ShapeRect.Rect(Vector2(0,0), Vector2(1280,720), (71, 121, 201)))
 

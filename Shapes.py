@@ -13,3 +13,11 @@ buttons = []
 
 # Creating an array to hold all the text
 text = []
+
+
+def clearAll():
+    lines = []
+    rectangles = []
+    borderRectangles = []
+    buttons = []
+    text = []
