@@ -16,7 +16,7 @@ def startingEvent():
     Shapes.buttons.append(Button.Button(Vector2(40,40),Vector2(200,60),[175,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5),1, 30))
 
     # Setting Button
-    Shapes.buttons.append(Button.Button(Vector2(1000,40),Vector2(150,60),[75,75,75],5,[0,0,0], "Settings",[0,0,0], Vector2(15,5),1, 30))
+    Shapes.buttons.append(Button.Button(Vector2(1000,40),Vector2(150,60),[75,75,75],5,[0,0,0], "Settings",[0,0,0], Vector2(15,5),5, 30))
 
     # Start Button
     Shapes.buttons.append(Button.Button(Vector2(390,330),Vector2(500,120),[28, 165, 179],5,[0,0,0], "Start Program",[0,0,0], Vector2(5,5),1, 70))
@@ -29,6 +29,15 @@ def testEvent():
 
 def closeProgram():
     pygame.quit()
+
+def settingsMenu():
+    Shapes.clearAll()
+
+    # Backgrounds
+    Shapes.rectangles.append(ShapeRect.Rect(Vector2(0,0), Vector2(1280,720), (70, 70, 70)))
+
+    # Close Program Button
+    Shapes.buttons.append(Button.Button(Vector2(40,40),Vector2(200,60),[175,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5),1, 30))
 
 def rollCredits():
     Shapes.clearAll()
@@ -66,3 +75,6 @@ def linkToEvent(event : int):
 
     if event == 4:
         returnToHome()
+
+    elif event == 5:
+        settingsMenu()
