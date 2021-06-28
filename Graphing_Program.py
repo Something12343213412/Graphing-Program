@@ -38,7 +38,10 @@ while True:
 
     # checking if the cursor is over buttons
     for i in range(len(Shapes.buttons)):
-        Shapes.buttons[i].isClicked()
+        if Shapes.runLoop:
+            Shapes.buttons[i].isClicked()
+
+    Shapes.runLoop = True
 
     # Drawing Buttons
     Rendering.drawButtons(Shapes.buttons)

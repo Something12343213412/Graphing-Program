@@ -14,6 +14,7 @@ buttons = []
 # Creating an array to hold all the text
 text = []
 
+runLoop = True
 
 def clearAll():
     lines.clear()
