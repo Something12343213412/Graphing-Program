@@ -43,5 +43,8 @@ while True:
     # Drawing Buttons
     Rendering.drawButtons(Shapes.buttons)
 
+    # Drawing Text
+    Rendering.DrawText(Shapes.text)
+
     # Displaying everything
     pygame.display.flip()

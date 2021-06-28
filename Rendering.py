@@ -33,6 +33,6 @@ def drawButtons(buttons : []):
         Text.displayText(screen, buttons[i].getTextInformation())
 
 # Render Text
-def RenderText(text : []):
+def DrawText(text : []):
     for i in range(len(text)):
         Text.displayText(text[i])
