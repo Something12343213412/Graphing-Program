@@ -1,4 +1,6 @@
 import pygame
+import Shapes
+
 
 def testEvent():
     print("test")
