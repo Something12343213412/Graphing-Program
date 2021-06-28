@@ -35,4 +35,4 @@ def drawButtons(buttons : []):
 # Render Text
 def DrawText(text : []):
     for i in range(len(text)):
-        Text.displayText(text[i])
+        Text.displayText(screen, text[i])
