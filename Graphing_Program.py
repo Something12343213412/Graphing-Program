@@ -13,9 +13,8 @@ import Events
 # Creating the clock
 clock = pygame.time.Clock()
 
-
 # Calling the starting event
-Events.LinkToEvent(2)
+Events.linkToEvent(2)
 
 while True:
 
