@@ -16,8 +16,8 @@ text = []
 
 
 def clearAll():
-    lines = []
-    rectangles = []
-    borderRectangles = []
-    buttons = []
-    text = []
+    lines.clear()
+    rectangles.clear()
+    borderRectangles.clear()
+    buttons.clear()
+    text.clear()
