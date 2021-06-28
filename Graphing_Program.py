@@ -7,6 +7,7 @@ from ShapeRectBorder import RectBorder
 from Button import Button
 import Rendering
 import Text
+import Shapes
 
 # Creating the clock
 clock = pygame.time.Clock()
