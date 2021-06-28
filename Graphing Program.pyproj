@@ -27,7 +27,7 @@
     <Compile Include="Events.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="List Of Shapes.py">
+    <Compile Include="Shapes.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Text.py">
