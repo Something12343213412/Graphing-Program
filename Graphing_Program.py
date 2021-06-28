@@ -50,20 +50,20 @@ while True:
     clock.tick(60)
 
     # Drawing Lines
-    Rendering.drawLines(lines)
+    Rendering.drawLines(Shapes.lines)
 
     # Drawing Rectangles
-    Rendering.drawRectangles(rectangles)
+    Rendering.drawRectangles(Shapes.rectangles)
 
     # Drawing Rectangles Borders
-    Rendering.drawRectanglesBorder(borderRectangles)
+    Rendering.drawRectanglesBorder(Shapes.borderRectangles)
 
     # checking if the cursor is over buttons
-    for i in range(len(buttons)):
-        buttons[i].isClicked()
+    for i in range(len(Shapes.buttons)):
+        Shapes.buttons[i].isClicked()
 
     # Drawing Buttons
-    Rendering.drawButtons(buttons)
+    Rendering.drawButtons(Shapes.buttons)
 
     # Displaying everything
     pygame.display.flip()
