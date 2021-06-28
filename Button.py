@@ -44,6 +44,10 @@ class Button(RectBorder):
         self.isPressed = False
         self.isHovered = False
 
+        # making the position of the text reletive to the button
+        self.textInfo.pos.x += pos.x
+        self.textInfo.pos.y += pos.y
+
     def getTextInformation(self):
         return self.textInfo
 
