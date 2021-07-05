@@ -32,10 +32,13 @@ class State():
     def changeState(self, newState):
         self.previousState.append(self.currentState)
         self.currentState = newState
+        renderCurrentState(self.currentState)
 
     def stepBackAState(self):
         self.currentState = self.previousStates[-1]
         self.previousStates.pop(-1)
+
+state = State()
 
 
 
