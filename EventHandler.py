@@ -36,7 +36,7 @@ def settingsMenu():
 
     # Back Button
     backButton = Button.Button(Vector2(40,600),Vector2(75,60),[150,150,150],5,[0,0,0], "Back",[0,0,0], Vector2(5,5), 30)
-    #backButton.addOnClickedCall(backButton)
+    backButton.addOnClickedCall(State.state.stepBackAState())
     Shapes.buttons.append(backButton)
 
 
@@ -52,13 +52,14 @@ def rollCredits():
 
     # Back Button
     
-    #backButton = Button.Button(Vector2(40,600),Vector2(75,60),[150,150,150],5,[0,0,0], "Back",[0,0,0], Vector2(5,5),4, 30)
-    #backButton.addOnClickedCall()
+    backButton = Button.Button(Vector2(40,600),Vector2(75,60),[150,150,150],5,[0,0,0], "Back",[0,0,0], Vector2(5,5),4, 30)
+    backButton.addOnClickedCall(State.state.stepBackAState())
+    Shapes.buttons.append(backButton)
 
 
     # Setting Button
     settingsButton = Button.Button(Vector2(1000,40),Vector2(150,60),[75,75,75],5,[0,0,0], "Settings",[0,0,0], Vector2(15,5), 30)
-    settingsButton.addOnClickedCall(settingsMenu)
+    settingsButton.addOnClickedCall(State.)
     Shapes.buttons.append(settingsButton)
 
     # Adding the credits
