@@ -8,7 +8,7 @@ from Button import Button
 import Rendering
 import Text
 import Shapes
-import Events
+import EventHandler as Events
 
 # Creating the clock
 clock = pygame.time.Clock()

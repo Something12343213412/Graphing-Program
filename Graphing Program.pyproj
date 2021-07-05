@@ -27,10 +27,13 @@
     <Compile Include="InputBox.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Events.py">
+    <Compile Include="EventHandler.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Shapes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="State.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Text.py">

@@ -3,19 +3,41 @@ from ShapeRectBorder import RectBorder
 from PositionalVectors import *
 import Text
 import pygame
-import Events
+import EventHandler
 
 class Button(RectBorder):
     
+    def WhenExit(self):
+        self.color = self.baseColor
+
+    def WhenClicked(self):
+        self.color = self.colorWhenClicked
+
+    def WhenHovered(self):
+        self.color = self.colorWhenHovered
+
+    def addOnHoveredCall(self, input):
+        self.OnHovered.append(input)
+
+    def addOnClickedCall(self, input):
+        self.OnClicked.append(input)
+
+    def addOnExitCall(self, input):
+        self.OnExit.append(input)
+
+
     # constructor
-    def __init__(self, pos : Vector2, dimensions : Vector2, color : (int,int,int), borderWidth : int, borderColor : (int,int,int), characters : '', textColor : (int,int,int), textPosition : Vector2, event : int, textSize = 20):
+    def __init__(self, pos : Vector2, dimensions : Vector2, color : (int,int,int), borderWidth : int, borderColor : (int,int,int), characters : '', textColor : (int,int,int), textPosition : Vector2, textSize = 20):
         self.pos = pos
         self.dimensions = dimensions
         self.color = color
         self.baseColor = color
 
-        # adding the event that the button is linked to
-        self.linkedEvent = event
+        self.OnHovered = []
+        self.OnClicked = []
+        self.OnExit = []
+
+        
 
         # adding a color when clicked
         self.colorWhenClicked = (color[0]/2,color[1]/2,color[2]/2)
@@ -47,6 +69,16 @@ class Button(RectBorder):
         # making the position of the text reletive to the button
         self.textInfo.pos.x += pos.x
         self.textInfo.pos.y += pos.y
+         
+        self.OnExit.append(self.WhenExit)
+
+        self.addOnClickedCall(self.WhenClicked)
+        
+        self.OnHovered.append(self.WhenHovered) 
+
+
+
+
 
     def getTextInformation(self):
         return self.textInfo
@@ -58,19 +90,25 @@ class Button(RectBorder):
         mousePosition = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
         # Collision logic
         if(mousePosition.x > self.collider.leftBorder and mousePosition.x < self.collider.rightBorder and mousePosition.y > self.collider.upperBorder and mousePosition.y < self.collider.lowerBorder):
-            self.color = self.colorWhenHovered
+            for i in self.OnHovered:
+                i()
             self.isHovered = True
 
         else:
-            self.color = self.baseColor
-            self.isHovered = False
+            if self.isHovered:
+                for i in self.OnExit:
+                    i()
+                    self.isHovered = False
 
     def isClicked(self):
         self.isPointerOver()
         if(pygame.mouse.get_pressed()[0] and self.isHovered):
             # Budget Solution for now until we add an event system
             self.color = self.colorWhenClicked
-            Events.linkToEvent(self.linkedEvent)
+            for i in self.OnClicked:
+                print(i)
+                i()
+
 
 
 
