@@ -31,7 +31,7 @@ def settingsMenu():
 
     # Close Program Button
     closeButton = Button.Button(Vector2(40,40),Vector2(200,60),[150,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5), 30)
-    closeButton.addOnClickedCall()
+    closeButton.addOnClickedCall(closeProgram)
     Shapes.buttons.append(closeButton)
 
     # Back Button
