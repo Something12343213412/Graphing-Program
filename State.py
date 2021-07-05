@@ -10,17 +10,17 @@ graphingMenu = 4
 class State():
 
     # Checks the current state then changes the objects in Shape accordingly
-    def renderCurrentState():
-        if currentState == mainMenu:
-            EventHandler.startingEvent()
+    def renderCurrentState(self):
+        if self.currentState == mainMenu:
+            EventHandler.mainMenu()
 
-        elif currentState == settingsMenu:
+        elif self.currentState == settingsMenu:
             EventHandler.settingsMenu()
 
-        elif currentState == creditsMenu:
+        elif self.currentState == creditsMenu:
             EventHandler.rollCredits()
 
-        elif currentState == graphingMenu:
+        elif self.currentState == graphingMenu:
             EventHandler.graphingMenu()
 
     # Constructor
@@ -30,14 +30,16 @@ class State():
     
     # change state, 
     def changeState(self, newState):
-        self.previousState.append(self.currentState)
+        self.previousStates.append(self.currentState)
         self.currentState = newState
-        renderCurrentState(self.currentState)
+        self.renderCurrentState()
 
     # step backs a state
     def stepBackAState(self):
+        print(self.previousStates)
         self.currentState = self.previousStates[-1]
         self.previousStates.pop(-1)
+        self.renderCurrentState()
 
 state = State()
 

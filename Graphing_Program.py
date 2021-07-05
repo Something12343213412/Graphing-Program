@@ -14,7 +14,7 @@ import EventHandler as Events
 clock = pygame.time.Clock()
 
 # Calling the starting event
-Events.linkToEvent(2)
+Events.mainMenu()
 
 while True:
 

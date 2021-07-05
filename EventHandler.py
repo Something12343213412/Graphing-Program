@@ -32,12 +32,10 @@ def settingsMenu():
     # Close Program Button
     closeButton = Button.Button(Vector2(40,40),Vector2(200,60),[150,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5), 30)
     closeButton.addOnClickedCall(closeProgram)
-    Shapes.buttons.append(closeButton)
 
     # Back Button
     backButton = Button.Button(Vector2(40,600),Vector2(75,60),[150,150,150],5,[0,0,0], "Back",[0,0,0], Vector2(5,5), 30)
-    backButton.addOnClickedCall(State.state.stepBackAState())
-    Shapes.buttons.append(backButton)
+    backButton.addOnClickedCall(State.state.stepBackAState)
 
 
 def rollCredits():
@@ -48,19 +46,15 @@ def rollCredits():
     # Close Program Button
     closeButton = Button.Button(Vector2(40,40),Vector2(200,60),[150,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5), 30)
     closeButton.addOnClickedCall(closeProgram)
-    Shapes.buttons.append(closeButton)
 
     # Back Button
-    
     backButton = Button.Button(Vector2(40,600),Vector2(75,60),[150,150,150],5,[0,0,0], "Back",[0,0,0], Vector2(5,5),4, 30)
-    backButton.addOnClickedCall(State.state.stepBackAState())
-    Shapes.buttons.append(backButton)
+    backButton.addOnClickedCall(State.state.stepBackAState)
 
 
     # Setting Button
     settingsButton = Button.Button(Vector2(1000,40),Vector2(150,60),[75,75,75],5,[0,0,0], "Settings",[0,0,0], Vector2(15,5), 30)
-    settingsButton.addOnClickedCall(State.)
-    Shapes.buttons.append(settingsButton)
+    settingsButton.addOnClickedCall(State.state.changeState(State.settingsMenu))
 
     # Adding the credits
     Shapes.text.append(Text.textInformation(Vector2(300,300),(175,175,175),"Credits : Kevin Sandberg, Main Programmer",30))
@@ -80,7 +74,8 @@ def graphingMenu():
     Shapes.buttons.append(Button.Button(Vector2(40,600),Vector2(75,60),[150,150,150],5,[0,0,0], "Back",[0,0,0], Vector2(5,5), 30))
 
     # Setting Button
-    Shapes.buttons.append(Button.Button(Vector2(1000,40),Vector2(150,60),[75,75,75],5,[0,0,0], "Settings",[0,0,0], Vector2(15,5), 30))
+    settingsButton = Button.Button(Vector2(1000,40),Vector2(150,60),[75,75,75],5,[0,0,0], "Settings",[0,0,0], Vector2(15,5), 30)
+    settingsButton.addOnClickedCall(State.state.changeState(State.settingsMenu))
 
     # Graphing Rectangle
     Shapes.borderRectangles.append(ShapeRectBorder.RectBorder(Vector2(290,240),Vector2(800,500),[190,190,190],10,[0,0,0]))
@@ -103,22 +98,18 @@ def mainMenu():
 
     closeProgramButton = Button.Button(Vector2(40,40),Vector2(200,60),[175,75,75],5,[0,0,0], "Close Program",[0,0,0], Vector2(5,5), 30)
     closeProgramButton.addOnClickedCall(closeProgram)
-    Shapes.buttons.append(closeProgramButton)
-
+ 
     # Setting Button
     settingsButton = Button.Button(Vector2(1000,40),Vector2(150,60),[75,75,75],5,[0,0,0], "Settings",[0,0,0], Vector2(15,5), 30)
-    settingsButton.addOnClickedCall(settingsMenu)
-    Shapes.buttons.append(settingsButton)
+    settingsButton.addOnClickedCall(lambda : State.state.changeState(State.settingsMenu))
 
     # Start Button
     startButton = Button.Button(Vector2(390,330),Vector2(500,120),[28, 165, 179],5,[0,0,0], "Start Program",[0,0,0], Vector2(5,5), 70)
     startButton.addOnClickedCall(graphingMenu)
-    Shapes.buttons.append(startButton)
 
     # Credits Buttonin
     creditsButton = Button.Button(Vector2(580,530),Vector2(120,60),[125,125,125],5,[0,0,0], "Credits",[0,0,0], Vector2(5,5), 30)
     creditsButton.addOnClickedCall(rollCredits)
-    Shapes.buttons.append(creditsButton)
 
 def testEvent():
     print("test")

@@ -4,6 +4,7 @@ from PositionalVectors import *
 import Text
 import pygame
 import EventHandler
+import Shapes
 
 class Button(RectBorder):
     
@@ -75,6 +76,8 @@ class Button(RectBorder):
         self.addOnClickedCall(self.WhenClicked)
         
         self.OnHovered.append(self.WhenHovered) 
+
+        Shapes.buttons.append(self)
 
 
 
