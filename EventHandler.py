@@ -91,7 +91,7 @@ def closeProgram():
 
 
 # Creates the basic home screen, called at the start of the program
-def startingEvent():
+def mainMenu():
     Shapes.clearAll()
 
     # Background
@@ -130,7 +130,7 @@ def testEvent():
 
     
 def returnToHome():
-    startingEvent()
+    mainMenu()
     
 def linkToEvent(event : int):
     if event == 0:
@@ -140,7 +140,7 @@ def linkToEvent(event : int):
         closeProgram()
 
     if event == 2:
-        startingEvent()
+        mainMenu()
 
     if event == 3:
         rollCredits()
