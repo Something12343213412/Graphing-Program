@@ -1,5 +1,7 @@
 import pygame
 import Text
+import ShapeLine
+from PositionalVectors import Vector2
 
 # Creating the screen
 size = width, height = 1280,720
@@ -9,6 +11,11 @@ screen = pygame.display.set_mode(size)
 def drawLines(lines : []):
     for i in range(len(lines)):
         pygame.draw.line(screen, lines[i].getColor(), lines[i].getStartingPositionArray(), lines[i].getEndingPositionArray(), lines[i].getWidth())
+
+# draws a singular line
+def drawLine(line):
+    pygame.draw.line(screen, line.getColor(), line.getStartingPositionArray(), line.getEndingPositionArray(), line.getWidth())
+
 
 # Drawing Rectangles
 def drawRectangles(rectangles : []):
@@ -31,25 +38,19 @@ def drawPointsOnPlane(PointsOnPlane : []):
         
 # draw lines on planes
 def drawLinesOnPlane(LinesOnPlane : []):
+
+    displayLine = ShapeLine.Line(Vector2(0,0), Vector2(0,0), (0,0,0),5)
+
     for i in range(len(LinesOnPlane)):
         
-        LinesOnPlane[i].One.x += 290
-        LinesOnPlane[i].Two.x += 290
+        displayLine.One.x = LinesOnPlane[i].One.x + 290
+        displayLine.Two.x = LinesOnPlane[i].Two.x + 290
 
-        LinesOnPlane[i].One.y += 240
-        LinesOnPlane[i].Two.y += 240
+        displayLine.One.y = LinesOnPlane[i].One.y + 240
+        displayLine.Two.y = LinesOnPlane[i].Two.y + 240
 
         #print(LinesOnPlane.one.x + " " + LinesOnPlane.one.y + " " )
-
-    drawLines(LinesOnPlane)
-
-    for i in range(len(LinesOnPlane)):
-        
-        LinesOnPlane[i].One.x -= 290
-        LinesOnPlane[i].Two.x -= 290
-
-        LinesOnPlane[i].One.y -= 240
-        LinesOnPlane[i].Two.y -= 240
+        drawLine(displayLine)
 
 
 # Drawing Buttons

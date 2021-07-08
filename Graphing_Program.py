@@ -11,12 +11,7 @@ import Shapes
 import EventHandler as Events
 import State
 import Mouse
-
-
-# Change this file to whatever you path is
-f = open("InformationForGraphing.txt", "r")
-a = Vector2(int(f.readline()), int(f.readline()))
-b = Vector2(int(f.readline()), int(f.readline()))
+import Function
 
 # Creating the clock
 clock = pygame.time.Clock()
@@ -24,8 +19,7 @@ clock = pygame.time.Clock()
 # Calling the starting event
 State.state.mainMenu()
 
-# TestCase
-Shapes.linesOnGraph.append(Line(a, b, (255,255,255), 5))
+Shapes.linesOnGraph.append(Function.test.returnLine(0))
 
 
 while True:
