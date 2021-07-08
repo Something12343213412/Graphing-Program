@@ -45,7 +45,6 @@ class State():
 
     # step backs a state
     def stepBackAState(self):
-        print(self.previousStates)
         self.currentState = self.previousStates[-1]
         self.previousStates.pop(-1)
         self.renderCurrentState()

@@ -5,6 +5,7 @@ import Text
 import pygame
 import EventHandler
 import Shapes
+from Mouse import *
 
 class Button(RectBorder):
     
@@ -105,11 +106,10 @@ class Button(RectBorder):
 
     def isClicked(self):
         self.isPointerOver()
-        if(pygame.mouse.get_pressed()[0] and self.isHovered):
+        if(mouse.isReleased and self.isHovered):
             # Budget Solution for now until we add an event system
             self.color = self.colorWhenClicked
             for i in self.OnClicked:
-                print(i)
                 i()
 
 

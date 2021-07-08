@@ -1,33 +1,37 @@
 from PositionalVectors import Vector2
+import Rendering
 import pygame
 
-class mouse():
 
-    def __init(self):
+class Mouse():
+
+    def __init__(self):
         # Getting the mouse position
-        position = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
+        self.position = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
 
         # Variable to check if the mouse is currently being clicked
-        isPressed = False
+        self.isPressed = False
 
         # checks if the mouse was released this frame
-        isReleased = False
+        self.isReleased = False
     
-    def refresh():
+    def refresh(self):
 
         # Reseting is released
-        isReleased = False
+        self.isReleased = False
 
         # checking if mouse is released this frame
-        if isPressed and pygame.mouse.get_pressed()[0] == False:
-            isReleased = True
+        if self.isPressed and pygame.mouse.get_pressed()[0] == False:
+            self.isReleased = True
 
         # Reseting is pressed variable
-        isPressed = pygame.mouse.get_pressed()[0]
+        self.isPressed = pygame.mouse.get_pressed()[0]
 
         # updating the mouse
-        position = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
+        self.position = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
 
+
+mouse = Mouse()
 
         
 

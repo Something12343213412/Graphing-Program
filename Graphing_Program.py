@@ -10,6 +10,7 @@ import Text
 import Shapes
 import EventHandler as Events
 import State
+import Mouse
 
 
 # Change this file to whatever you path is
@@ -28,6 +29,8 @@ Shapes.linesOnGraph.append(Line(a, b, (255,255,255), 5))
 
 
 while True:
+
+    Mouse.mouse.refresh()
 
     # Getting the mouse position
     mousePosition = Vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
