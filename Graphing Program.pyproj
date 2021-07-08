@@ -33,6 +33,9 @@
     <Compile Include="EventHandler.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Mouse.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Shapes.py">
       <SubType>Code</SubType>
     </Compile>
