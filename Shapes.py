@@ -14,6 +14,10 @@ buttons = []
 # Creating an array to hold all the text
 text = []
 
+# Lines On Graph
+linesOnGraph = []
+
+
 runLoop = True
 
 def clearAll():
@@ -22,3 +26,4 @@ def clearAll():
     borderRectangles.clear()
     buttons.clear()
     text.clear()
+    #linesOnGraph.clear()

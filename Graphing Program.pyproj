@@ -24,6 +24,9 @@
     <Compile Include="Button.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Graph.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="InputBox.py">
       <SubType>Code</SubType>
     </Compile>

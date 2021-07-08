@@ -23,6 +23,34 @@ def drawRectanglesBorder(borderRectangles : []):
         # Drawing the actual rectangle
         pygame.draw.rect(screen, borderRectangles[i].getColor(), borderRectangles[i].getPygameRect())
 
+# drawing points on the plane
+def drawPointsOnPlane(PointsOnPlane : []):
+    for i in range(len(PointsOnPlane)):
+        # drawing the point
+        pygame.draw.rect(screen, [0,0,0], PointsOnPlane[i].getPygameRect())
+        
+# draw lines on planes
+def drawLinesOnPlane(LinesOnPlane : []):
+    for i in range(len(LinesOnPlane)):
+        
+        LinesOnPlane[i].One.x += 290
+        LinesOnPlane[i].Two.x += 290
+
+        LinesOnPlane[i].One.y += 240
+        LinesOnPlane[i].Two.y += 240
+
+        #print(LinesOnPlane.one.x + " " + LinesOnPlane.one.y + " " )
+
+    drawLines(LinesOnPlane)
+
+    for i in range(len(LinesOnPlane)):
+        
+        LinesOnPlane[i].One.x -= 290
+        LinesOnPlane[i].Two.x -= 290
+
+        LinesOnPlane[i].One.y -= 240
+        LinesOnPlane[i].Two.y -= 240
+
 
 # Drawing Buttons
 def drawButtons(buttons : []):
