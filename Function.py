@@ -9,22 +9,28 @@ f = open("InformationForGraphing.txt", "r")
 
 class function():
 
-    def __init__(self,b):
+    def __init__(self,typeOfLine, b,m):
         self.b = b
+        self.m = m
         self.startingPosition = Vector2(0,0)
         self.endingPosition = Vector2(0, 0)
+        self.typeOfLine = typeOfLine
 
     def lineDots(self, viewPortScale, viewPortDimension = Vector2(800,400)):
+        if self.typeOfLine == 1:
+            self.startingPosition.x = self.b + 290
+            self.startingPosition.y = viewPortDimension.y + 240
+            #Shapes.RectanglesOnPlane.append(ShapeRect.Rect(Vector2(self.startingPosition.x, self.startingPosition.y), Vector2(2,2),(255,255,255)))
 
-        self.startingPosition.x = self.b + 290
-        self.startingPosition.y = viewPortDimension.y + 240
-        #Shapes.RectanglesOnPlane.append(ShapeRect.Rect(Vector2(self.startingPosition.x, self.startingPosition.y), Vector2(2,2),(255,255,255)))
-
-        while self.startingPosition.x <= viewPortDimension.x + 290 and self.startingPosition.y >= viewPortDimension.y - 160:
-            self.startingPosition.x += 1
-            self.startingPosition.y -= 1
-            Shapes.RectanglesOnPlane.append(ShapeRect.Rect(Vector2(self.startingPosition.x, self.startingPosition.y), Vector2(2,2),(255,255,255)))
-            
+            while self.startingPosition.x <= viewPortDimension.x + 290 and self.startingPosition.y >= viewPortDimension.y - 160 and self.startingPosition.x >= 290 and self.startingPosition.y <= viewPortDimension.y + 240:
+                self.startingPosition.x += 1 * self.m
+                self.startingPosition.y -= 1
+                Shapes.RectanglesOnPlane.append(ShapeRect.Rect(Vector2(self.startingPosition.x, self.startingPosition.y), Vector2(2,2),(255,255,255)))
+        
+        #if self.typeOfLine == 2:
+            #while self.x < 800:
+                #self.startingPosition.y = self.startPosition.x^2 + self.startingPosition.x
+                #self.startingPosition.x = self.startingPosition.y - self.startingPosition.x^2
             
 
 
@@ -51,7 +57,10 @@ class function():
 
         return ShapeLine.Line(self.startingPosition, self.endingPosition, (255,255,255), 5)
 
-test = function(int(f.readline()))
+test = function(int(f.readline), int(f.readline()), float(f.readline()))
 test.lineDots(1)
+
+test2 = function(int(f.readline), int(f.readline()), float(f.readline()))
+test2.lineDots(1)
 
 
