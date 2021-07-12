@@ -1,4 +1,5 @@
 import ShapeLine
+import Shapes
 from PositionalVectors import Vector2
 
 # Change this file to whatever you path is
@@ -11,6 +12,18 @@ class function():
         self.b = b
         self.startingPosition = Vector2(0,0)
         self.endingPosition = Vector2(0, 0)
+
+    def lineDots(self, viewPortScale, viewPortDimension = Vector2(800,400)):
+
+        self.startingPosition.x = self.b
+        self.startingPosition.y = 0
+
+        while self.startingPosition.x <= 800:
+            self.startingPosition.x += 1
+            self.startingPosition.y -= 1
+            
+            
+
 
     def returnLine(self, viewPortScale, viewPortDimension = Vector2(800,400)):
 

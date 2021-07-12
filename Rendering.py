@@ -35,6 +35,12 @@ def drawPointsOnPlane(PointsOnPlane : []):
     for i in range(len(PointsOnPlane)):
         # drawing the point
         pygame.draw.rect(screen, [0,0,0], PointsOnPlane[i].getPygameRect())
+
+# draw circles on plane
+def drawRectanglesOnPlane(PointsOnPlane : []):
+    for i in range (len(PointsOnPlane)):
+        # drawing circles on the plane
+        pygame.draw.rect(screen, [0,0,0], PointsOnPlane[i].getPygameRect())
         
 # draw lines on planes
 def drawLinesOnPlane(LinesOnPlane : []):

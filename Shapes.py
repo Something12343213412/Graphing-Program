@@ -17,6 +17,9 @@ text = []
 # Lines On Graph
 linesOnGraph = []
 
+# Rectangles on plane
+RectanglesOnPlane = []
+
 
 runLoop = True
 

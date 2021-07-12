@@ -19,7 +19,10 @@ clock = pygame.time.Clock()
 # Calling the starting event
 State.state.mainMenu()
 
-Shapes.linesOnGraph.append(Function.test.returnLine(0))
+
+Function.test.lineDots(1)
+
+#Shapes.linesOnGraph.append(Function.test.returnLine(0))
 
 
 while True:
