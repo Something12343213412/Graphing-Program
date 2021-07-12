@@ -1,5 +1,6 @@
 import ShapeLine
 import Shapes
+import ShapeRect
 from PositionalVectors import Vector2
 
 # Change this file to whatever you path is
@@ -15,12 +16,14 @@ class function():
 
     def lineDots(self, viewPortScale, viewPortDimension = Vector2(800,400)):
 
-        self.startingPosition.x = self.b
-        self.startingPosition.y = 0
+        self.startingPosition.x = self.b + 290
+        self.startingPosition.y = viewPortDimension.y + 240
+        #Shapes.RectanglesOnPlane.append(ShapeRect.Rect(Vector2(self.startingPosition.x, self.startingPosition.y), Vector2(2,2),(255,255,255)))
 
-        while self.startingPosition.x <= 800:
+        while self.startingPosition.x <= viewPortDimension.x + 290 and self.startingPosition.y >= viewPortDimension.y - 160:
             self.startingPosition.x += 1
             self.startingPosition.y -= 1
+            Shapes.RectanglesOnPlane.append(ShapeRect.Rect(Vector2(self.startingPosition.x, self.startingPosition.y), Vector2(2,2),(255,255,255)))
             
             
 
@@ -49,5 +52,6 @@ class function():
         return ShapeLine.Line(self.startingPosition, self.endingPosition, (255,255,255), 5)
 
 test = function(int(f.readline()))
+test.lineDots(1)
 
 

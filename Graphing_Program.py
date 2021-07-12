@@ -66,6 +66,8 @@ while True:
     # Drawing Lines on Canvas
     if State.state.currentState == State.graphingMenu:
         Rendering.drawLinesOnPlane(Shapes.linesOnGraph)
+        Rendering.drawRectanglesOnPlane(Shapes.RectanglesOnPlane)
+        
 
     # Displaying everything
     pygame.display.flip()
