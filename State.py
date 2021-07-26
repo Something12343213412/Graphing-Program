@@ -110,7 +110,7 @@ class State():
 
         # Adding the credits
         Shapes.text.append(Text.textInformation(Vector2(300,300),(175,175,175),"Credits : Kevin Sandberg, Main Programmer",30))
-        Shapes.text.append(Text.textInformation(Vector2(300,340),(175,175,175),"Credits : RobertTeaches, Debugger",30))
+        Shapes.text.append(Text.textInformation(Vector2(300,340),(175,175,175),"Credits : RobertTeaches, Debugger, Smart Person",30))
 
     def graphingMenu(self):
         Shapes.runLoop = False

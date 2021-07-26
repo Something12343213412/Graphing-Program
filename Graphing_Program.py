@@ -20,7 +20,6 @@ clock = pygame.time.Clock()
 State.state.mainMenu()
 
 
-Function.test.lineDots(1)
 
 #Shapes.linesOnGraph.append(Function.test.returnLine(0))
 
